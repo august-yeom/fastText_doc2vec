@@ -20,12 +20,12 @@ This will produce object files for all the classes as well as the main binary `f
 
 ## Example use cases
 
-This library has an two use cases: document embedding using PV-DM or PV-DBOW model. <br/> 
+This library has two use cases: document embedding using PV-DM and PV-DBOW model. <br/> 
 These were described in the paper [1](#distributed-representations-of-sentences-and-documents).
 
 ### Document Embedding
 
-In order to represent document in vector space, as described in [1](#distributed-representations-of-sentences-and-documents), do:
+In order to embed document in vector space, as described in [1](#distributed-representations-of-sentences-and-documents), do:
 
 ```
 $ ./fasttext pvdm -model model.bin -input data.txt -output docvecs
@@ -34,9 +34,9 @@ $ ./fasttext pvdbow -model model.bin -input data.txt -output docvecs
 ```
 
 where `model.bin` is a previously trained model using [fasttext word representation learning](https://github.com/facebookresearch/fastText#word-representation-learning). <br/> 
-so most options are inherited from [fasttext word representation learning](https://github.com/facebookresearch/fastText#word-representation-learning) without epoch, thread, [etc](#full-documentation) <br/> 
+As such, most options are inherited from [fasttext word representation learning](https://github.com/facebookresearch/fastText#word-representation-learning) without epoch, thread, [etc](#full-documentation) <br/> 
 `data.txt` is a file containing `utf-8` encoded labeled documents. (\_\_label\_\_\<label\>, \<text\>) <br/> 
-At the end of document embeding the program will save a single file: `docvecs.vec`. <br/> 
+At the end of document embeding, the program will save a single file: `docvecs.vec`. <br/> 
 `docvecs.vec` is a text file containing the labeled document vectors, one per line. 
 
 ## Full documentation
