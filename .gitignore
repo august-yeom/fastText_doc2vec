@@ -1,0 +1,8 @@
+.*.swp
+*.o
+*.bin
+*.vec
+data
+fasttext
+result
+.DS_Store
